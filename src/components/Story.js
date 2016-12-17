@@ -197,7 +197,7 @@ export default class Story extends React.Component {
 
     return (
       <div>
-        <h1 style={stylesheet.source.h1}>Story Source</h1>
+        <h1 style={stylesheet.source.h1}>{this.props.sourceHeadline}</h1>
         <Pre>
         {React.Children.map(this.props.children, (root, idx) => (
           <Node key={idx} depth={0} node={root} />
@@ -288,6 +288,7 @@ Story.displayName = 'Story';
 Story.propTypes = {
   context: React.PropTypes.object,
   info: React.PropTypes.string,
+  sourceHeadline: React.PropTypes.string,
   propTables: React.PropTypes.arrayOf(React.PropTypes.func),
   showInline: React.PropTypes.bool,
   showHeader: React.PropTypes.bool,
@@ -303,5 +304,6 @@ Story.defaultProps = {
   showInline: false,
   showHeader: true,
   showSource: true,
+  sourceHeadline: 'Story Source',
   mtrcConf: {}
 };

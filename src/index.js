@@ -57,6 +57,7 @@ export default {
     return this.add(storyName, (context) => {
       const props = {
         info,
+        sourceHeadline: options.sourceHeadline,
         context,
         showInline: Boolean(options.inline),
         showHeader: Boolean(options.header),

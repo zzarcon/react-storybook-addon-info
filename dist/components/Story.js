@@ -311,7 +311,7 @@ var Story = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           { style: stylesheet.source.h1 },
-          'Story Source'
+          this.props.sourceHeadline
         ),
         _react2.default.createElement(
           _markdown.Pre,
@@ -421,6 +421,7 @@ Story.displayName = 'Story';
 Story.propTypes = {
   context: _react2.default.PropTypes.object,
   info: _react2.default.PropTypes.string,
+  sourceHeadline: _react2.default.PropTypes.string,
   propTables: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.func),
   showInline: _react2.default.PropTypes.bool,
   showHeader: _react2.default.PropTypes.bool,
@@ -433,5 +434,6 @@ Story.defaultProps = {
   showInline: false,
   showHeader: true,
   showSource: true,
+  sourceHeadline: 'Story Source',
   mtrcConf: {}
 };

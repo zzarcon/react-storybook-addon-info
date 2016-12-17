@@ -80,6 +80,7 @@ exports.default = {
     return this.add(storyName, function (context) {
       var props = {
         info: info,
+        sourceHeadline: options.sourceHeadline,
         context: context,
         showInline: Boolean(options.inline),
         showHeader: Boolean(options.header),
